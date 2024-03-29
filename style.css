@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&family=Righteous&family=Ubuntu:ital,wght@0,500;0,700;1,400&display=swap');
+
+:root{
+
+--primary_color: orangered
+;
+--white_color: #fff;
+--ubuntu: "ubuntu";
+--righteous: "Righteous";
+--box-shadow: 10px 10px 5px rgba(0,0,0,.3);
+}
+
+html {
+font-size: 70%;
+}
+
+
+
+*{
+
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: "poppins";
+}
+
+/*----------Utality Classes start----------*/
+a{
+text-decoration: none;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 80px ;
+}
+
+.main_heading{
+    font-size: 4rem;
+    font-family: var(--righteous);
+    text-align: center;
+   color: var(--white_color); 
+  
+   
+}
+
+.main_heading-1{
+    font-size: 4rem;
+    font-family: var(--righteous);
+    text-align: center;
+    color: #000;
+}
+
+.normal_heading{
+    font-size: 2rem;
+    font-family:var(--righteous);
+    color: var(--white_color);
+    text-align: center;
+}
+
+.normal_heading-1{
+    font-size: 2rem;
+    font-family:var(--righteous);
+    text-align: center;
+    color: var(--primary_color);
+}
+
+
+/*----------Utality Classes close----------*/
+
+
+/*----------header start----------*/
+
+header{
+    width: 100%;  
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    padding: 1.5rem 0;
+    z-index: 100;
+    transition: all 0.5s ease-in-out;
+}
+
+header.sticky{
+    background: #000;
+
+}
+
+.logo img{
+    display:block;
+    object-fit: cover;
+    width: 50%;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.navbar nav{
+    display: flex;
+    align-items: center;
+}
+
+
+.navbar nav li{
+    list-style-type: none;
+    margin: 0 1rem ;
+}
+
+.navbar nav li a {
+    font-size: 1.3rem;
+    position: relative;
+    color: var(--white_color);
+    
+}
+
+.navbar nav li a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: var(--primary_color);
+    width: 0;
+    left: 0;
+    top: 30px;
+    transition:all 0.5s ease-in-out
+
+}
+
+.navbar nav li a:hover::after{
+    width: 100%;
+}
+
+.btn{
+    font-size: 2.2rem;
+    color: var(--white_color);
+    cursor: pointer;
+    display: none;
+}
+/*----------header close----------*/
+
+/*---------Showcase start----------*/
+#showcase{
+    background: url('showcase2.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    position: relative;
+    z-index: -10;
+}
+
+#showcase::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -11;
+}
+
+
+#showcase .content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+#showcase .content h2{
+    font-size: 7rem;
+    font-family: var(--righteous);
+    color: var(--white_color);
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+#showcase .content h3{
+    font-size: 3rem;
+    font-family: var(--righteous);
+    color: var(--white_color);
+    text-align: center;
+    letter-spacing: 2px;
+    
+}
+
+/*----------Showcase close----------*/
+/*----------Special Offer start----------*/
+#sp_offer{
+    padding: 10rem 0;
+
+}
+
+.sp_content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+    grid-gap: 4rem;
+}
+
+.headings h2{
+    font-size: 5rem;
+    font-family: var(--righteous);
+
+}
+
+.headings h3{
+    font-size: 2rem;
+    font-family: var(--ubuntu);
+    color: var(--primary_color);
+}
+.imgs_content{
+    display: flex;
+    justify-content: space-between;
+     align-items: center;
+    padding: 3rem 0;
+}
+
+.imgs{
+    display: flex;
+    align-items: center;
+}
+
+.imgs img{
+    display: block  ;
+   object-fit: cover;
+   
+}
+
+.content_for_img{
+    padding-left: 3rem;
+}
+
+.content_for_img h4{
+    font-size: 2rem;
+    padding-block-end: 0.5rem;
+    font-family: var(--ubuntu);
+}
+.content_for_img p{
+    font-size: 1.2rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+.imgs_content .price{
+    font-size: 3rem;
+    font-family: var(--righteous);
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    box-shadow: 3px 1px rgba(124, 122, 122, 0.699);
+    padding: 1rem;
+}
+
+.right_side_content{
+    width: 100%;
+
+}
+
+.right_side_content img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    margin-left: auto;
+}
+
+.right_side_content{
+    position: relative;
+    width: 100%;
+}
+
+.img_right_side .over_img{
+    position: absolute;
+    top: 40%;
+    left: 21%;
+    transform: translate(50%, -50%); 
+    padding:4rem ;
+    text-align: center;
+    background-color: var(--primary_color);
+    color: var(--white_color);
+    border-radius:60% ;
+}
+.over_img h2{
+    font-size: 2rem;
+}
+
+.over_img a{
+    color: var(--white_color);
+}
+
+/*----------Special Offer close----------*/
+/*----------Footer  start----------*/ 
+#footer{
+    background: #212121d2;
+    padding: 4rem 0;
+    color: var(--white_color);
+    font-size: 1.3rem;
+}
+
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+}
+
+.about_us img{
+    display: block;
+    object-fit: cover;
+    width: 50%;
+}
+
+.about_us p{
+    line-height: 1.8;
+    padding-bottom: 2rem;
+    text-align: justify;
+}
+
+.about_us a{
+    color: var(--primary_color);
+}
+
+.footer_container h2{
+    padding-bottom: 3rem;
+    color: var(--primary_color);
+}
+
+.opening_hours{
+    line-height: 1.8;
+}
+
+.opening_hours .day, .email, .add{
+    color: var(--primary_color);
+}
+
+.opening_hours .day span{
+    color: var(--white_color);
+}
+
+
+footer{
+    background: #171717;
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    color: var(--white_color);
+}
+footer a{
+    color: var(--primary_color);
+}
+/*---------Footer  close----------*/ 
